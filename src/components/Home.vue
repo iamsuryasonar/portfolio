@@ -51,12 +51,12 @@ export default {
     return {
       
       items: [
-        {id: 1, url:"https://open.spotify.com/playlist/7peNDAvxQjTxaqCPgffsJQ?si=3gyrqEviTHeyTmECjChX9Q", img:"./assets/addictivekiss.png"},
-        {id: 2, url:"https://open.spotify.com/playlist/22UKNc2UHZ9v8sFAKA5FGM?si=x3QKJ5exTWWzUFX5Novlkw", img:"./assets/lastcigarrete.png"},
-        {id: 3, url:"https://open.spotify.com/playlist/4wseglZinfy2nd4RL8WYgn?si=ZspyMkNKT56AZ8WdcsUuUQ&nd=1", img:"./assets/letseewhereitakes.png"},
-        {id: 4, url:"https://open.spotify.com/playlist/3BCRherVfP5W7nxtri3wvN?si=ca6Q-1BgT1-SC8AAimHEzA", img:"./assets/symphonic.png"},
-        {id: 5, url:"https://open.spotify.com/playlist/7AfRiZQytRTG91iaINvLrX?si=ZY0YlTS2QrGzWNCwmPbiew", img:"./assets/voicesinmyhead.png"},
-        {id: 6, url:"https://open.spotify.com/playlist/3FPjKUhotuXl3Rlopqukcf?si=KQ-RvfgJQ_uYofRfdN1SJA", img:"./assets/youtosic.png"},
+        {id: 1, url:"https://open.spotify.com/playlist/7peNDAvxQjTxaqCPgffsJQ?si=3gyrqEviTHeyTmECjChX9Q", img:"./assets/addictivekiss.jpg"},
+        {id: 2, url:"https://open.spotify.com/playlist/22UKNc2UHZ9v8sFAKA5FGM?si=x3QKJ5exTWWzUFX5Novlkw", img:"./assets/lastcigarrete.jpg"},
+        {id: 3, url:"https://open.spotify.com/playlist/4wseglZinfy2nd4RL8WYgn?si=ZspyMkNKT56AZ8WdcsUuUQ&nd=1", img:"./assets/letseewhereitakes.jpg"},
+        {id: 4, url:"https://open.spotify.com/playlist/3BCRherVfP5W7nxtri3wvN?si=ca6Q-1BgT1-SC8AAimHEzA", img:"./assets/symphonic.jpg"},
+        {id: 5, url:"https://open.spotify.com/playlist/7AfRiZQytRTG91iaINvLrX?si=ZY0YlTS2QrGzWNCwmPbiew", img:"./assets/voicesinmyhead.jpg"},
+        {id: 6, url:"https://open.spotify.com/playlist/3FPjKUhotuXl3Rlopqukcf?si=KQ-RvfgJQ_uYofRfdN1SJA", img:"./assets/youtosic.jpg"},
       ],
       twitter: "https://www.twitter.com/iamsuryasonar",
       facebook: "https://www.facebook.com/iamsuryasonar",
