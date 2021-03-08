@@ -180,4 +180,24 @@ body {
   min-width: 190px;
   background: #000;
 }
+.card .overlayer {
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: rgba(0,0,0,0.6);
+	text-align: center;
+	visibility: hidden;
+}
+
+.overlayer .fa-play-circle {
+	color: #fff;
+	font-size: 73px;
+	margin-top: 53px;
+	transition: 100ms ease-in-out;
+}
+.fa-play-circle:hover {
+	transform: scale(1.1);
+}
 </style>
