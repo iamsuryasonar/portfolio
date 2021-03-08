@@ -8,7 +8,7 @@
           <p>
             CS Student 
             <br>
-            Spacex Fanboi
+            SpaceX Fanboi
           </p>
         </div>
       </div>
