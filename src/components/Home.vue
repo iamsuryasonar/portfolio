@@ -5,7 +5,11 @@
         <img :src="displaypicture" alt="" />
         <div>
           <h3>Surya Sonar</h3>
-          <p>CS Student</p>
+          <p>
+            CS Student 
+            <br>
+            Spacex Fanboi
+          </p>
         </div>
       </div>
 
@@ -31,47 +35,40 @@
     <div class="wrapper">
       <h2>Spotify Playlists</h2>
     </div>
-
     <div class="cards">
       <a v-for="(item, id) in items" :key="id" :href="item.url">
-        <img class="card" :src="item.img" />
+        <img class="card" :src="item.img">
       </a>
     </div>
   </div>
 </template>
 
 <script>
-import firebase from "firebase";
 export default {
   name: "Home",
   components: {},
   data() {
     return {
-      items: [],
+      
+      items: [
+        {id: 1, url:"https://open.spotify.com/playlist/7peNDAvxQjTxaqCPgffsJQ?si=3gyrqEviTHeyTmECjChX9Q", img:"./assets/addictivekiss.png"},
+        {id: 2, url:"https://open.spotify.com/playlist/22UKNc2UHZ9v8sFAKA5FGM?si=x3QKJ5exTWWzUFX5Novlkw", img:"./assets/lastcigarrete.png"},
+        {id: 3, url:"https://open.spotify.com/playlist/4wseglZinfy2nd4RL8WYgn?si=ZspyMkNKT56AZ8WdcsUuUQ&nd=1", img:"./assets/letseewhereitakes.png"},
+        {id: 4, url:"https://open.spotify.com/playlist/3BCRherVfP5W7nxtri3wvN?si=ca6Q-1BgT1-SC8AAimHEzA", img:"./assets/symphonic.png"},
+        {id: 5, url:"https://open.spotify.com/playlist/7AfRiZQytRTG91iaINvLrX?si=ZY0YlTS2QrGzWNCwmPbiew", img:"./assets/voicesinmyhead.png"},
+        {id: 6, url:"https://open.spotify.com/playlist/3FPjKUhotuXl3Rlopqukcf?si=KQ-RvfgJQ_uYofRfdN1SJA", img:"./assets/youtosic.png"},
+      ],
       twitter: "https://www.twitter.com/iamsuryasonar",
       facebook: "https://www.facebook.com/iamsuryasonar",
       instagram: "https://www.instagram.com/iamsuryasonar",
       linkedin: "https://www.linkedin.com/in/iamsuryasonar",
       github: "https://www.github.com/iamsuryasonar",
-      displaypicture:
-        "https://firebasestorage.googleapis.com/v0/b/portfolio-29560.appspot.com/o/displaypicture.jpg?alt=media&token=f4e817a7-4c23-45d2-bdcb-b27647f1b95c",
+      displaypicture: "./assets/displaypicture.jpg",
     };
   },
   created() {
-    this.getData();
   },
   methods: {
-    getData() {
-      firebase
-        .firestore()
-        .collection("alldata")
-        .get()
-        .then((querySnapshot) => {
-          querySnapshot.forEach((doc) => {
-            this.items.push(doc.data());
-          });
-        });
-    },
   },
 };
 </script>
@@ -94,8 +91,8 @@ body {
   justify-content: center;
   background-image: linear-gradient(
     to bottom right,
-    rgb(194, 241, 255),
-    rgb(44, 206, 255)
+    rgb(255, 94, 104),
+    rgb(77, 179, 209)
   );
   padding: 0 7rem;
   transform: scale(0.8);
@@ -104,16 +101,16 @@ body {
 .container {
   position: relative;
   max-width: 615px;
-  min-width: 415px;
-  width: 92%;
+  min-width: 300px;
+  width: 90%;
   margin: auto;
   background-color: #fff;
   overflow: hidden;
   border-radius: 2px;
-  box-shadow: 0px 2px 6px rgb(0, 139, 182);
+  box-shadow: 0px 2px 6px rgba(0, 166, 199, 0.666);
   .profile-header {
     padding: 5rem;
-    background-color: rgb(58, 209, 255);
+    background-color: rgb(214, 90, 73);
     clip-path: circle(70% at 50% 0%);
 
     .profile-content {
@@ -133,10 +130,12 @@ body {
           margin-bottom: 0;
           font-size: 1.3rem;
           white-space: nowrap;
+          font-family: 'Ubuntu Mono';
         }
         p {
           margin-top: 0.5rem;
           font-size: 0.9rem;
+          font-family: 'Ubuntu Mono';
         }
       }
     }
@@ -149,7 +148,7 @@ body {
     i {
       margin: 1.5rem 0.6rem;
       font-size: 1.7rem;
-      color: rgb(0, 107, 139);
+      color: rgb(34, 9, 7);
       cursor: pointer;
       transition: 0.3s ease all;
       &:hover {
@@ -159,7 +158,6 @@ body {
   }
 }
 
-//spotifycards
 
 .wrapper h2 {
   color: #000;
@@ -182,28 +180,4 @@ body {
   min-width: 190px;
   background: #000;
 }
-
-// .wrapper {
-//   margin-top: 0px;
-// }
-// .wrapper_section_2 {
-//   margin-top: 10px;
-// }
-// .card:hover .overlayer {
-//   visibility: visible;
-// }
-// .card img {
-//   width: 100%;
-//   height: 100%;
-// }
-// .card .overlayer {
-//   top: 0;
-//   right: 0;
-//   width: 100%;
-//   height: 100%;
-//   position: absolute;
-//   background: rgba(0, 0, 0, 0.6);
-//   text-align: center;
-//   visibility: hidden;
-// }
 </style>
