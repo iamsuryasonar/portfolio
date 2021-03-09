@@ -1,35 +1,33 @@
 <template>
   <div v-cloak class="container">
-    <div class="profile-header">
-      <div class="profile-content">
-        <img :src="displaypicture" alt="" />
-        <div>
-          <h3>Surya Sonar</h3>
-          <p>
-            CS Student
-            <br />
-            SpaceX Fanboi
-          </p>
-        </div>
+    <div class="profile-content">
+      <img :src="displaypicture" alt="" />
+      <div>
+        <h3>Surya Sonar</h3>
+        <p>
+          CS Student
+          <br />
+          SpaceX Fanboi
+        </p>
       </div>
+    </div>
 
-      <div class="social-icons">
-        <a :href="twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a :href="facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a :href="instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a :href="linkedin">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a :href="github">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
+    <div class="social-icons">
+      <a :href="twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a :href="facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a :href="instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a :href="linkedin">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a :href="github">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
 
     <div class="wrapper">
@@ -120,68 +118,68 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(
-    to bottom right,
-    rgb(255, 94, 104),
-    rgb(77, 179, 209)
-  );
-  padding: 0 7rem;
+  background-color: #fff;
+  padding: 0 4rem;
   transform: scale(0.8);
 }
 
 .container {
   position: relative;
-  max-width: 615px;
-  min-width: 300px;
-  width: 90%;
+  max-width: 600px;
+  min-width: 400px;
   margin: auto;
-  background-color: #fff;
+  background-color: #ecf0f3;
   overflow: hidden;
-  border-radius: 2px;
-  box-shadow: 0px 2px 6px rgba(0, 166, 199, 0.666);
-  .profile-header {
-    padding: 5rem;
-    background-color: rgb(214, 90, 73);
-    clip-path: circle(70% at 50% 0%);
-
-    .profile-content {
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px#ceced1;
+  .profile-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 30px 0 30px;
+    img {
+      padding: 0.6rem;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      margin-top: 1.5rem;
-      padding: 0 4rem;
-      color: rgb(0, 57, 75);
-      img {
-        width: 6rem;
-        border-radius: 50%;
-        margin-right: 1rem;
+      justify-content: center;
+      box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
+    }
+    div {
+      padding: 0 4px 0 30px;
+      h3 {
+        margin-bottom: 0;
+        color: #31344b;
+        font-size: 1.3rem;
+        white-space: nowrap;
+        font-family: "Ubuntu Mono";
       }
-      div {
-        h3 {
-          margin-bottom: 0;
-          font-size: 1.3rem;
-          white-space: nowrap;
-          font-family: "Ubuntu Mono";
-        }
-        p {
-          margin-top: 0.5rem;
-          font-size: 0.9rem;
-          font-family: "Ubuntu Mono";
-        }
+      p {
+        color: #393e46;
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        font-family: "Ubuntu Mono";
+        direction: rtl;
       }
     }
   }
+
   .social-icons {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 1rem;
     i {
-      margin: 1.5rem 0.6rem;
+      padding: 0.5rem;
+      border-radius: 50%;
+      box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
+      margin: 4px 4px;
       font-size: 1.7rem;
-      color: rgb(34, 9, 7);
+      color: #31344b;
       cursor: pointer;
-      transition: 0.3s ease all;
+      transition: 0.4s ease all;
       &:hover {
         transform: scale(1.25);
       }
@@ -190,7 +188,7 @@ body {
 }
 
 .wrapper h2 {
-  color: #000;
+  color: #393e46;
   font-size: 1.6rem;
   text-align: center;
   font-weight: bold;
@@ -200,15 +198,19 @@ body {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  margin: 16;
+  margin: auto;
+  margin-bottom: 2rem;
 }
 .card {
-  width: 190px;
-  height: 190px;
-  margin: 16px;
+  width: 160px;
+  height: 160px;
+  margin: 10px 10px 10px 10px;
   position: relative;
-  min-width: 190px;
-  background: #000;
+  min-width: 160px;
+  background: #ecf0f3;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: -3px -3px 7px #ffffff, 4px 4px 6px #ceced1;
 }
 .card:hover .overlayer {
   visibility: visible;
@@ -219,6 +221,7 @@ body {
 }
 
 .card .overlayer {
+  border-radius: 6px;
   top: 0;
   right: 0;
   width: 100%;
