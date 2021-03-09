@@ -6,8 +6,8 @@
         <div>
           <h3>Surya Sonar</h3>
           <p>
-            CS Student 
-            <br>
+            CS Student
+            <br />
             SpaceX Fanboi
           </p>
         </div>
@@ -37,7 +37,12 @@
     </div>
     <div class="cards">
       <a v-for="(item, id) in items" :key="id" :href="item.url">
-        <img class="card" :src="item.img">
+        <div class="card">
+          <div class="overlayer">
+            <i class="far fa-play-circle"></i>
+          </div>
+          <img :src="item.img" />
+        </div>
       </a>
     </div>
   </div>
@@ -49,14 +54,43 @@ export default {
   components: {},
   data() {
     return {
-      
       items: [
-        {id: 1, url:"https://open.spotify.com/playlist/7peNDAvxQjTxaqCPgffsJQ?si=3gyrqEviTHeyTmECjChX9Q", img:"./assets/addictivekiss.jpg"},
-        {id: 2, url:"https://open.spotify.com/playlist/22UKNc2UHZ9v8sFAKA5FGM?si=x3QKJ5exTWWzUFX5Novlkw", img:"./assets/lastcigarrete.jpg"},
-        {id: 3, url:"https://open.spotify.com/playlist/4wseglZinfy2nd4RL8WYgn?si=ZspyMkNKT56AZ8WdcsUuUQ&nd=1", img:"./assets/letseewhereitakes.jpg"},
-        {id: 4, url:"https://open.spotify.com/playlist/3BCRherVfP5W7nxtri3wvN?si=ca6Q-1BgT1-SC8AAimHEzA", img:"./assets/symphonic.jpg"},
-        {id: 5, url:"https://open.spotify.com/playlist/7AfRiZQytRTG91iaINvLrX?si=ZY0YlTS2QrGzWNCwmPbiew", img:"./assets/voicesinmyhead.jpg"},
-        {id: 6, url:"https://open.spotify.com/playlist/3FPjKUhotuXl3Rlopqukcf?si=KQ-RvfgJQ_uYofRfdN1SJA", img:"./assets/youtosic.jpg"},
+        {
+          id: 1,
+          url:
+            "https://open.spotify.com/playlist/7peNDAvxQjTxaqCPgffsJQ?si=3gyrqEviTHeyTmECjChX9Q",
+          img: "./assets/addictivekiss.jpg",
+        },
+        {
+          id: 2,
+          url:
+            "https://open.spotify.com/playlist/22UKNc2UHZ9v8sFAKA5FGM?si=x3QKJ5exTWWzUFX5Novlkw",
+          img: "./assets/lastcigarrete.jpg",
+        },
+        {
+          id: 3,
+          url:
+            "https://open.spotify.com/playlist/4wseglZinfy2nd4RL8WYgn?si=ZspyMkNKT56AZ8WdcsUuUQ&nd=1",
+          img: "./assets/letseewhereitakes.jpg",
+        },
+        {
+          id: 4,
+          url:
+            "https://open.spotify.com/playlist/3BCRherVfP5W7nxtri3wvN?si=ca6Q-1BgT1-SC8AAimHEzA",
+          img: "./assets/symphonic.jpg",
+        },
+        {
+          id: 5,
+          url:
+            "https://open.spotify.com/playlist/7AfRiZQytRTG91iaINvLrX?si=ZY0YlTS2QrGzWNCwmPbiew",
+          img: "./assets/voicesinmyhead.jpg",
+        },
+        {
+          id: 6,
+          url:
+            "https://open.spotify.com/playlist/3FPjKUhotuXl3Rlopqukcf?si=KQ-RvfgJQ_uYofRfdN1SJA",
+          img: "./assets/youtosic.jpg",
+        },
       ],
       twitter: "https://www.twitter.com/iamsuryasonar",
       facebook: "https://www.facebook.com/iamsuryasonar",
@@ -66,10 +100,8 @@ export default {
       displaypicture: "./assets/displaypicture.jpg",
     };
   },
-  created() {
-  },
-  methods: {
-  },
+  created() {},
+  methods: {},
 };
 </script>
 
@@ -78,7 +110,6 @@ export default {
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
 }
-
 
 body {
   min-height: 1vh;
@@ -130,12 +161,12 @@ body {
           margin-bottom: 0;
           font-size: 1.3rem;
           white-space: nowrap;
-          font-family: 'Ubuntu Mono';
+          font-family: "Ubuntu Mono";
         }
         p {
           margin-top: 0.5rem;
           font-size: 0.9rem;
-          font-family: 'Ubuntu Mono';
+          font-family: "Ubuntu Mono";
         }
       }
     }
@@ -158,46 +189,53 @@ body {
   }
 }
 
-
 .wrapper h2 {
   color: #000;
   font-size: 1.6rem;
   text-align: center;
   font-weight: bold;
 }
-
 .cards {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  margin: 16;
 }
 .card {
   width: 190px;
   height: 190px;
-  margin: 16px 16px 16px 16px;
+  margin: 16px;
   position: relative;
   min-width: 190px;
   background: #000;
 }
+.card:hover .overlayer {
+  visibility: visible;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
 .card .overlayer {
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	background: rgba(0,0,0,0.6);
-	text-align: center;
-	visibility: hidden;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  visibility: hidden;
 }
 
 .overlayer .fa-play-circle {
-	color: #fff;
-	font-size: 73px;
-	margin-top: 53px;
-	transition: 100ms ease-in-out;
+  color: #fff;
+  font-size: 73px;
+  margin-top: 53px;
+  transition: 100ms ease-in-out;
 }
 .fa-play-circle:hover {
-	transform: scale(1.1);
+  transform: scale(1.1);
 }
 </style>
