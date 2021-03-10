@@ -2,7 +2,7 @@
   <div v-cloak class="container">
     <div class="profile-content">
       <img :src="displaypicture" alt="" />
-      <div>
+      <div class="namediv">
         <h3>Surya Sonar</h3>
         <p>
           CS Student
@@ -36,9 +36,6 @@
     <div class="cards">
       <a v-for="(item, id) in items" :key="id" :href="item.url">
         <div class="card">
-          <div class="overlayer">
-            <i class="far fa-play-circle"></i>
-          </div>
           <img :src="item.img" />
         </div>
       </a>
@@ -103,14 +100,14 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="css">
 * {
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
 }
 
 body {
-  min-height: 1vh;
+  min-height: 2vh;
   overflow-x: hidden;
   margin: 0;
   height: 100%;
@@ -119,127 +116,91 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  padding: 0 4rem;
+  padding: 0 10px;
   transform: scale(0.8);
 }
 
 .container {
-  position: relative;
   max-width: 600px;
-  min-width: 400px;
-  margin: auto;
+  min-width: 450px;
   background-color: #ecf0f3;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 3px 3px 5px#ceced1;
-  .profile-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: 30px 30px 0 30px;
-    img {
-      padding: 0.6rem;
-      height: 150px;
-      width: 150px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: -8px -8px 8px #ffffff, 8px 8px 8px #ceced1;
-    }
-    div {
-      h3 {
-        align-items: center;
-        color: #31344b;
-        font-size: 2rem;
-        font-weight: 700;
-        white-space: nowrap;
-        margin: 15px 0px 8px 0px;
-      }
-      p {
-        text-align: center;
-        color: #393e46;
-         margin: 10px 0px 10px 0px;
-        font-size: 1.3rem;
-        padding: 0px;
-      }
-    }
-  }
+}
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8vh 4vw 4vh 4vw;
+}
+.profile-content img {
+  padding: 0.6rem;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -8px -8px 8px #ffffff, 8px 8px 8px #ceced1;
+}
+.namediv {
+  margin: 4vh 0vw 6vh 0vw;
+}
+.namediv h3 {
+  align-items: center;
+  color: #31344b;
+  font-size: 2rem;
+  font-weight: 700;
+  white-space: nowrap;
+  margin: 8px 0px 8px 0px;
+}
 
-  .social-icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0.5rem;
-    i {
-      padding: 0.5rem;
-      border-radius: 50%;
-      box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
-      margin: 4px 4px;
-      font-size: 1.7rem;
-      color: #31344b;
-      cursor: pointer;
-      transition: 0.4s ease all;
-      &:hover {
-        transform: scale(1.25);
-      }
-    }
-  }
+.namediv p {
+  text-align: center;
+  color: #393e46;
+  margin: 0px;
+  font-size: 1.3rem;
+  padding: 0px;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+.social-icons i {
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
+  margin: 4px 4px;
+  font-size: 1.7rem;
+  color: #31344b;
+  cursor: pointer;
 }
 
 .wrapper h2 {
   color: #393e46;
   font-size: 1.6rem;
   text-align: center;
-  font-weight: bold;
 }
 .cards {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   justify-content: center;
-  margin: auto;
   margin-bottom: 2rem;
 }
 .card {
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
   margin: 10px 10px 10px 10px;
-  position: relative;
   min-width: 160px;
   background: #ecf0f3;
   padding: 10px;
   border-radius: 6px;
   box-shadow: -3px -3px 7px #ffffff, 4px 4px 6px #ceced1;
 }
-.card:hover .overlayer {
-  visibility: visible;
-}
 .card img {
   width: 100%;
   height: 100%;
-}
-
-.card .overlayer {
-  border-radius: 6px;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.6);
-  text-align: center;
-  visibility: hidden;
-}
-
-.overlayer .fa-play-circle {
-  color: #fff;
-  font-size: 73px;
-  margin: 25% 10% 0 10%;
-  transition: 100ms ease-in-out;
-}
-.fa-play-circle:hover {
-  transform: scale(1.1);
 }
 </style>
