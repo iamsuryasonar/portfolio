@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/"
+  to = "/MyPlaylist"
+  status = 200
+
+  from ="/"
+  to = "/Project"
+  status = 200
+
