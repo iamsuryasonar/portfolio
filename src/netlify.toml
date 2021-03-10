@@ -1,9 +1,11 @@
 [[redirects]]
-  from = "/"
+  from = "/*"
   to = "/MyPlaylist"
   status = 200
 
-  from ="/"
+
+[[redirects]]
+  from ="/*"
   to = "/Project"
   status = 200
 
