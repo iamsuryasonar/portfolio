@@ -48,7 +48,7 @@
 
 <script>
 export default {
-  name: "Home",
+  name: "Profile",
   components: {},
   data() {
     return {
@@ -134,34 +134,35 @@ body {
   box-shadow: 3px 3px 5px#ceced1;
   .profile-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     margin: 30px 30px 0 30px;
     img {
       padding: 0.6rem;
-      height: 100px;
-      width: 100px;
+      height: 150px;
+      width: 150px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
+      box-shadow: -8px -8px 8px #ffffff, 8px 8px 8px #ceced1;
     }
     div {
-      padding: 0 4px 0 30px;
       h3 {
-        margin-bottom: 0;
+        align-items: center;
         color: #31344b;
-        font-size: 1.3rem;
+        font-size: 2rem;
+        font-weight: 700;
         white-space: nowrap;
-        font-family: "Ubuntu Mono";
+        margin: 15px 0px 8px 0px;
       }
       p {
+        text-align: center;
         color: #393e46;
-        margin-top: 0.5rem;
-        font-size: 0.9rem;
-        font-family: "Ubuntu Mono";
-        direction: rtl;
+         margin: 10px 0px 10px 0px;
+        font-size: 1.3rem;
+        padding: 0px;
       }
     }
   }
@@ -170,7 +171,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     i {
       padding: 0.5rem;
       border-radius: 50%;
@@ -235,7 +236,7 @@ body {
 .overlayer .fa-play-circle {
   color: #fff;
   font-size: 73px;
-  margin-top: 53px;
+  margin: 25% 10% 0 10%;
   transition: 100ms ease-in-out;
 }
 .fa-play-circle:hover {
