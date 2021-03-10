@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import MyPlaylists from '../views/MyPlaylists'
+import Projects from '../views/Projects'
 
 const routes = [
   {
@@ -7,6 +9,17 @@ const routes = [
     name: 'Home',
     component: Home
   },
+  {
+    path: '/myplaylists',
+    name: 'MyPlaylists',
+    component: MyPlaylists
+  },
+  {
+    path: '/Projects',
+    name: 'Projects',
+    component: Projects
+  },
+
 ]
 
 const router = createRouter({
