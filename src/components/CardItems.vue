@@ -79,7 +79,10 @@ export default {
   background: #ecf0f3;
   padding: 10px;
   border-radius: 6px;
-  box-shadow: -3px -3px 7px #ffffff, 4px 4px 6px #ceced1;
+  box-shadow: -8px -8px 8px #ffffff, 8px 8px 8px #ceced1;
+}
+.cardprofile:active{
+    box-shadow: 8px 8px 8px #ffffff, -8px -8px 8px #ceced1;
 }
 .cardprofile h3 {
   font-size: 24px;

@@ -99,6 +99,7 @@ export default {
   background: #ecf0f3;
   padding: 10px;
 }
+
 .cardimage{
   padding: 0.6rem;
   height: 150px;
@@ -107,6 +108,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: -7px -7px 7px #ffffff, 7px 7px 7px #ceced1;
+  box-shadow: -8px -8px 8px #ffffff, 8px 8px 8px #ceced1;
+}
+.cardimage:active{
+  
+box-shadow: 8px 8px 8px #ffffff, -8px -8px 8px #ceced1;
 }
 </style>

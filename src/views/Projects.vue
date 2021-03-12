@@ -1,18 +1,18 @@
 <template>
   <div v-cloak class="containerproject">
-  <div class="cardsproject">
-    <a
-      class="link"
-      v-for="(item, id) in carditems"
-      :key="id"
-      :href="item.url"
-    >
-      <div class="cardproject">
-        <h3>{{ item.text }}</h3>
-        <i class="fas fa-arrow-circle-right"></i>
-      </div>
-    </a>
-  </div>
+    <div class="cardsproject">
+      <a
+        class="link"
+        v-for="(item, id) in carditems"
+        :key="id"
+        :href="item.url"
+      >
+        <div class="cardproject">
+          <h3>{{ item.text }}</h3>
+          <i class="fas fa-arrow-circle-right"></i>
+        </div>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -59,7 +59,7 @@ export default {
 .containerproject {
   max-width: 450px;
   min-width: 450px;
-  margin-top:20vh;
+  margin-top: 20vh;
   background-color: #ecf0f3;
   overflow: hidden;
   border-radius: 10px;
@@ -96,7 +96,10 @@ export default {
   background: #ecf0f3;
   padding: 10px;
   border-radius: 6px;
-  box-shadow: -3px -3px 7px #ffffff, 4px 4px 6px #ceced1;
+  box-shadow: -8px -8px 8px #ffffff, 8px 8px 8px #ceced1;
+}
+.cardproject:active {
+  box-shadow: 8px 8px 8px #ffffff, -8px -8px 8px #ceced1;
 }
 .cardproject h3 {
   font-size: 24px;

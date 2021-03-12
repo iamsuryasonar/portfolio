@@ -80,6 +80,7 @@ export default {
           img: "./assets/youtosic.jpg",
         },
       ],
+      
       twitter: "https://www.twitter.com/iamsuryasonar",
       facebook: "https://www.facebook.com/iamsuryasonar",
       instagram: "https://www.instagram.com/iamsuryasonar",
@@ -124,6 +125,7 @@ padding: 0.6rem;
   justify-content: center;
   box-shadow: -8px -8px 8px #ffffff, 8px 8px 8px #ceced1;
 }
+
 .namediv {
   margin: 4vh 0vw 6vh 0vw;
 }
@@ -156,5 +158,8 @@ padding: 0.6rem;
   font-size: 1.7rem;
   color:rgb(65, 65, 65);
   cursor: pointer;
+}
+.social-icons i:active{
+box-shadow: 8px 8px 8px #ffffff, -8px -8px 8px #ceced1;
 }
 </style>
