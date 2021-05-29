@@ -96,10 +96,12 @@ export default {
   background: #ecf0f3;
   padding: 10px;
   border-radius: 6px;
-  box-shadow: -8px -8px 8px #ffffff, 8px 8px 8px #ceced1;
+    box-shadow:  8px 8px 10px #c3c3c3,
+             -8px -8px 10px #fdfdfd;
 }
 .cardproject:active {
-  box-shadow: 8px 8px 8px #ffffff, -8px -8px 8px #ceced1;
+box-shadow: inset 8px 8px 10px #c3c3c3,
+            inset -8px -8px 10px #fdfdfd;
 }
 .cardproject h3 {
   font-size: 24px;
