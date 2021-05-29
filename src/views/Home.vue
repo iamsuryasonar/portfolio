@@ -7,7 +7,7 @@
         <p>
           CS Student
           <br />
-          SpaceX Fanboi
+          Average homo-sapien
         </p>
       </div>
     </div>
