@@ -93,6 +93,7 @@ h2 {
   box-shadow: inset 7px 7px 10px #c4c7ca, inset -7px -7px 10px #ffffff;
 }
 .title h3 {
+  color: #545252;
   font-size: 24px;
   margin: auto auto auto 30px;
 }
