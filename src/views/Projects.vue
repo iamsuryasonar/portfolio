@@ -30,8 +30,8 @@ export default {
         },
         {
           id: 2,
-          url: "/",
-          text: "Coding",
+          url: "https://github.com/iamsuryasonar/CryptoRank",
+          text: "CryptoRank",
         },
         {
           id: 3,

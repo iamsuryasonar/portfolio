@@ -1,5 +1,8 @@
 <template>
-  <div v-cloak class="container">
+  <div>
+    
+  </div>
+  <div class="container">
     <div class="profile-content">
       <img class="displaypicture" :src="displaypicture" alt="" />
       <div class="namediv">
@@ -34,14 +37,14 @@
 </template>
 
 <script>
-import CardItems from "../components/CardItems"
+import CardItems from "../components/CardItems";
 export default {
   name: "Home",
   components: {
     CardItems,
   },
   data() {
-    return { 
+    return {
       twitter: "https://www.twitter.com/iamsuryasonar",
       facebook: "https://www.facebook.com/iamsuryasonar",
       instagram: "https://www.instagram.com/iamsuryasonar",
@@ -50,13 +53,18 @@ export default {
       displaypicture: "./assets/displaypicture.jpg",
     };
   },
-  created() {
+  created() {},
+  methods: {
+    
   },
-  methods: {},
+  mounted() {
+    
+  },
 };
 </script>
 
 <style lang="css">
+
 * {
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
@@ -76,8 +84,8 @@ export default {
   justify-content: space-between;
   margin: 6vh 4vw 4vh 4vw;
 }
-.displaypicture{
-padding: 0.6rem;
+.displaypicture {
+  padding: 0.6rem;
   height: 170px;
   width: 170px;
   border-radius: 50%;
@@ -109,20 +117,18 @@ padding: 0.6rem;
 .social-icons {
   display: flex;
   justify-content: center;
-  
 }
 .social-icons i {
   padding: 0.5rem;
   border-radius: 50%;
-    box-shadow:  8px 8px 10px #c3c3c3,
-             -8px -8px 10px #fdfdfd;
+  box-shadow: 8px 8px 10px #c3c3c3, -8px -8px 10px #fdfdfd;
   margin: 4px 4px;
   font-size: 1.7rem;
-  color:rgb(65, 65, 65);
+  color: rgb(65, 65, 65);
   cursor: pointer;
 }
-.social-icons i:active{
-box-shadow: inset 8px 8px 10px #c3c3c3,
-            inset -8px -8px 10px #fdfdfd;
+.social-icons i:active {
+  box-shadow: inset 8px 8px 10px #c3c3c3, inset -8px -8px 10px #fdfdfd;
 }
+
 </style>

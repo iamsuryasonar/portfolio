@@ -40,6 +40,16 @@ export default {
           style: "width: 60%;",
           text: "JAVA",
         },
+        {
+          id: 5,
+          style: "width: 30%;",
+          text: "Android",
+        },
+        {
+          id: 6,
+          style: "width: 50%;",
+          text: "Data Structure",
+        },
       ],
     };
   },
