@@ -35,8 +35,8 @@ export default {
         },
         {
           id: 3,
-          url: "/",
-          text: "Coding",
+          url: "https://github.com/iamsuryasonar/NoteBook",
+          text: "NoteBook",
         },
         {
           id: 4,
