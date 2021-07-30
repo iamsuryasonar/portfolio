@@ -58,7 +58,7 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 * {
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;

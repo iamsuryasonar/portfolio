@@ -1,17 +1,15 @@
 <template>
-  <div class="cardsprofile">
     <a
       class="link"
       v-for="(item, id) in carditems"
       :key="id"
       :href="item.url"
     >
-      <div class="cardprofile">
+      <div class="items">
         <h3>{{ item.text }}</h3>
         <i class="fas fa-arrow-circle-right"></i>
       </div>
     </a>
-  </div>
 </template>
 
 <script>
@@ -57,42 +55,34 @@ export default {
   text-decoration: none;
   color: grey;
 }
-.cardsprofile {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-}
-.cardprofile a {
+
+.items a {
   text-decoration: none;
+  
 }
-.cardprofile {
+.items {
   display: flex;
   cursor: pointer;
   justify-content: space-between;
-  width: 400px;
-  height: 67px;
-  margin: 10px 10px 10px 10px;
-  min-width: 160px;
+  width: auto;
+  height: 8%;
+  margin: 5% auto;
   background: #ecf0f3;
-  padding: 10px;
+  padding: 10px 10px;
   border-radius: 6px;
-    box-shadow:  8px 8px 10px #c3c3c3,
+  box-shadow:  8px 8px 10px #c3c3c3,
              -8px -8px 10px #fdfdfd;
 }
-.cardprofile:active{
+.items:active{
 box-shadow: inset 8px 8px 10px #c3c3c3,
             inset -8px -8px 10px #fdfdfd;
 }
-.cardprofile h3 {
+.items h3 {
   font-size: 24px;
   margin: auto auto auto 20px;
 }
-.cardprofile i {
+.items i {
   margin: 10px 20px 10px;
-
   font-size: 28px;
 }
 </style>
