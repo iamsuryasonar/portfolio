@@ -5,9 +5,11 @@
       <div class="namediv">
         <h3>Surya Sonar</h3>
         <p>
-          CS Student
-          <br />
-          Average homo-sapien
+          Computer Science Student
+          <br/>
+          &
+          <br/>
+          SpaceX fanboy
         </p>
       </div>
     </div>
@@ -62,11 +64,13 @@ export default {
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
 }
+
 .container {
-  margin: 10px auto;
+  margin: 15px auto;
   width: 90%;
   height: 100%;
 }
+
 .profile-content {
   display: flex;
   flex-direction: column;
@@ -75,11 +79,12 @@ export default {
   width: 100%;
   margin: auto;
 }
+
 .displaypicture {
   padding: 0.6rem;
   height: 8rem;
   width: 8rem;
-  margin-top: 5%;
+  margin-top: 1.5%;
   border-radius: 50%;
   box-shadow: -8px -8px 8px #ffffff, 8px 8px 8px #ceced1;
 }
@@ -90,6 +95,7 @@ export default {
   align-items: center;
   margin: 4vh 0vw 6vh 0vw;
 }
+
 .namediv h3 {
   color: #545252;
   font-size: 2rem;
@@ -105,10 +111,12 @@ export default {
   font-size: 1.3rem;
   padding: 0px;
 }
+
 .social-icons {
   display: flex;
   justify-content: center;
 }
+
 .social-icons i {
   padding: 0.5rem;
   border-radius: 50%;
@@ -118,19 +126,42 @@ export default {
   color: rgb(65, 65, 65);
   cursor: pointer;
 }
+
 .social-icons i:active {
   box-shadow: inset 8px 8px 10px #c3c3c3, inset -8px -8px 10px #fdfdfd;
 }
-@media only screen and (min-width: 600px) {
+
+
+@media only screen and (max-width: 600px) {
   .container {
-    width: 60%;
+    width: 90%;
   }
+
   .displaypicture {
     height: 8rem;
     width: 8rem;
   }
+
   .displaypicture {
     margin-top: 5%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container{
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container{
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container{
+    width: 55%;
   }
 }
 </style>

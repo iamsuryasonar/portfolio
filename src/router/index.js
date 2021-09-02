@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Projects from '../views/Projects'
 import Skills from '../views/Skills'
+import Blogs from '../views/Blogs'
+import NotFound from '../views/NotFound'
 
 const routes = [
   {
@@ -19,8 +21,16 @@ const routes = [
     name: 'Skills',
     component: Skills
   },
-
-
+  {
+    path: '/Blogs',
+    name: 'Blogs',
+    component: Blogs
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: 'Not Found',
+    component: NotFound
+  }
 ]
 
 const router = createRouter({

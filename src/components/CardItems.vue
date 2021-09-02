@@ -31,6 +31,12 @@ export default {
           text: "Skills",
           icon: "fa fab-task",
         },
+        {
+          id: 3,
+          url: "/Blogs",
+          text: "Blogs",
+          icon: "fa fab-task",
+        },
       ],
     };
   },
@@ -66,7 +72,7 @@ export default {
   justify-content: space-between;
   width: auto;
   height: 8%;
-  margin: 5% auto;
+  margin: 5% 10px;
   background: #ecf0f3;
   padding: 10px 10px;
   border-radius: 6px;

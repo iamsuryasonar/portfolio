@@ -1,52 +1,21 @@
 <template>
-  <div class="containerprojects">
+  <div class="wrapper">
     <div class="title">
-      <h3>Projects</h3>
+      <h3>404</h3>
     </div>
-    <div class="cardscontainer">
-      <a
-        class="link"
-        v-for="(item, id) in carditems"
-        :key="id"
-        :href="item.url"
-      >
-        <div class="eachcard">
-          <h3>{{ item.text }}</h3>
-          <i class="fas fa-arrow-circle-right"></i>
-        </div>
-      </a>
+    <div class="container">
+        <p> Page not Found!!! </p>
+        <a href="/">Go home?</a>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Projects",
+  name: "Not Found",
   components: {},
   data() {
     return {
-      carditems: [
-        {
-          id: 1,
-          url: "https://github.com/iamsuryasonar/portfolio",
-          text: "Portfolio",
-        },
-        {
-          id: 2,
-          url: "https://github.com/iamsuryasonar/CryptoRank",
-          text: "CryptoRank",
-        },
-        {
-          id: 3,
-          url: "https://github.com/iamsuryasonar/NoteBook",
-          text: "NoteBook",
-        },
-        {
-          id: 4,
-          url: "/",
-          text: "Coding",
-        },
-      ],
     };
   },
   created() {},
@@ -54,14 +23,14 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 
 * {
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
 }
 
-.containerprojects {
+.wrapper {
   margin: 7% auto;
   width: 90%;
   height: 100%;
@@ -96,11 +65,19 @@ export default {
   font-size: 24px;
   margin: auto auto auto 30px;
 }
+p {
+    font-size: 24px;
+}
 
-.cardscontainer {
-  width: auto;
+a{
+    text-decoration: none;
+}
+
+.container {
   display: flex;
   flex-direction: column;
+  align-content: space-around;
+  width: auto;
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
@@ -138,25 +115,25 @@ box-shadow: inset 8px 8px 10px #c3c3c3,
 }
 
 @media only screen and (max-width: 600px) {
-  .containerprojects {
+  .wrapper {
     width: 90%;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .containerprojects {
+  .wrapper {
     width: 75%;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .containerprojects {
+  .wrapper {
     width: 60%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .containerprojects {
+  .wrapper {
     width: 55%;
   }
 }

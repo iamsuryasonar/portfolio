@@ -1,7 +1,7 @@
 <template>
-  <div class="containerprojects">
+  <div class="containerblogs">
     <div class="title">
-      <h3>Projects</h3>
+      <h3>Blogs</h3>
     </div>
     <div class="cardscontainer">
       <a
@@ -21,30 +21,15 @@
 
 <script>
 export default {
-  name: "Projects",
+  name: "Blogs",
   components: {},
   data() {
     return {
       carditems: [
         {
           id: 1,
-          url: "https://github.com/iamsuryasonar/portfolio",
-          text: "Portfolio",
-        },
-        {
-          id: 2,
-          url: "https://github.com/iamsuryasonar/CryptoRank",
-          text: "CryptoRank",
-        },
-        {
-          id: 3,
-          url: "https://github.com/iamsuryasonar/NoteBook",
-          text: "NoteBook",
-        },
-        {
-          id: 4,
-          url: "/",
-          text: "Coding",
+          url: "",
+          text: "How to start coding?",
         },
       ],
     };
@@ -61,7 +46,7 @@ export default {
   font-family: "Ubuntu", sans-serif;
 }
 
-.containerprojects {
+.containerblogs {
   margin: 7% auto;
   width: 90%;
   height: 100%;
@@ -138,25 +123,25 @@ box-shadow: inset 8px 8px 10px #c3c3c3,
 }
 
 @media only screen and (max-width: 600px) {
-  .containerprojects {
+  .containerblogs {
     width: 90%;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .containerprojects {
+  .containerblogs {
     width: 75%;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .containerprojects {
+  .containerblogs {
     width: 60%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .containerprojects {
+  .containerblogs {
     width: 55%;
   }
 }
